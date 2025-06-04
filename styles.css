@@ -162,3 +162,51 @@ main{
   right: -20%;
   
 }
+
+@media(max-width: 1300px){
+  header{
+    padding: 1rem 0.5rem;
+  }
+  .content{
+    margin-top: 85%;
+  }
+  .robot-3d{
+    scale:0.8;
+    top: -20%;
+    right: 2%;
+  }
+}
+
+@media(max-width: 768px){
+  header{
+    padding: 1rem 0.1rem;
+  }
+  nav{
+    display: none;
+  }
+  .content{
+    margin-top: 25rem;
+  }
+  .robot-3d{
+    scale:0.5;
+    top: -25%;
+    right: 0;
+  }
+  .content{
+    max-width: 30rem;
+    margin-left: 10%;
+  }
+  .tag-box{
+    width: 12rem;
+  }
+  .content h1{
+    font-size: 2.5rem;
+  }
+  .description{
+    font-size: 1rem;
+  }
+  .content .content-btn{
+    font-size: 1rem;
+    padding: .5rem 1.2rem;
+  }
+}
