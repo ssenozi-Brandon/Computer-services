@@ -168,12 +168,35 @@ main{
     padding: 1rem 0.5rem;
   }
   .content{
-    margin-top: 85%;
+    margin-top: -45%;
+  }
+  .content p{
+    max-width: 25rem;
   }
   .robot-3d{
-    scale:0.8;
+    scale:.8;
     top: -20%;
-    right: 2%;
+    right: -25%;
+  }
+}
+
+@media(max-width: 1000px){
+  header{
+    padding: 1rem 0.5rem;
+  }
+  main{
+    margin-left: -10%;
+  }
+  .content{
+    margin-top: -50%;
+  }
+  .content h1{
+    font-size: 2rem;
+  }
+  .robot-3d{
+    scale:.8;
+    top: -20%;
+    right: -25%;
   }
 }
 
@@ -184,11 +207,14 @@ main{
   nav{
     display: none;
   }
+  main{
+    margin: auto;
+  }
   .content{
     margin-top: 25rem;
   }
   .robot-3d{
-    scale:0.5;
+    scale:.75;
     top: -25%;
     right: 0;
   }
