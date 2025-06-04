@@ -8,7 +8,7 @@ body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: black;
   color: #e7e7e7;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   line-height: 1.5;
 }
 
@@ -158,17 +158,75 @@ main{
 
 .robot-3d{
   position: absolute;
-  top: 0;
+  top: -18%;
   right: -20%;
   
 }
+
+/* Service Cards */
+.services {
+  padding: 2rem;
+  background-color: black;
+  color: #e7e7e7;
+}
+
+.service-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service {
+  background: #1a1a1a; 
+  border: 1px solid #8C0931; 
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(140, 9, 49, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 0 15px rgba(140, 9, 49, 0.7); /* Enhanced shadow */
+}
+
+.service i {
+  font-size: 3rem;
+  color: #8C0931; /* Icon color matches theme */
+  margin-bottom: 1rem;
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e7e7e7;
+  margin-bottom: 0.5rem;
+}
+
+.service p {
+  font-size: 1rem;
+  color: gray; /* Subtle text color */
+  line-height: 1.5;
+}
+
+.services-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #e7e7e7; /* Matches the theme */
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(140, 9, 49, 0.5); /* Subtle glow effect */
+}
+
 
 @media(max-width: 1300px){
   header{
     padding: 1rem 0.5rem;
   }
   .content{
-    margin-top: -45%;
+    margin-top: -60%;
   }
   .content p{
     max-width: 25rem;
@@ -178,9 +236,38 @@ main{
     top: -20%;
     right: -25%;
   }
+
+  .services-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-wrapper {
+    gap: 1.5rem;
+  }
+
+  .service {
+    width: 16rem;
+    padding: 1rem;
+  }
+
+  .service i {
+    font-size: 2.5rem;
+  }
+
+  .service h3 {
+    font-size: 1.3rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
+  .services {
+    margin-top: -65%; /* Reset margin */
+  }
 }
 
-@media(max-width: 1000px){
+@media(max-width: 1000px) and (min-width: 800px){
   header{
     padding: 1rem 0.5rem;
   }
@@ -195,8 +282,34 @@ main{
   }
   .robot-3d{
     scale:.8;
-    top: -20%;
+    top: -25%;
     right: -25%;
+  }
+  .service-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    gap: 1.5rem;
+  }
+
+  .service {
+    width: auto; /* Adjust width to fit grid */
+    padding: 1rem;
+  }
+
+  .service i {
+    font-size: 2.5rem;
+  }
+
+  .service h3 {
+    font-size: 1.3rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
+
+  .services-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -215,7 +328,7 @@ main{
   }
   .robot-3d{
     scale:.75;
-    top: -25%;
+    top: -33%;
     right: 0;
   }
   .content{
@@ -234,5 +347,76 @@ main{
   .content .content-btn{
     font-size: 1rem;
     padding: .5rem 1.2rem;
+  }
+
+  .services {
+    margin-top: 5rem; /* Add spacing between content and services */
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .services-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Align heading to the center */
+  }
+
+  .service-wrapper {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .service {
+    width: 90%; /* Full-width cards */
+    padding: 1rem;
+    margin: auto; /* Center the cards */
+  }
+
+  .service i {
+    font-size: 2rem;
+  }
+
+  .service h3 {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+  .services {
+    margin-top: 2rem; /* Add spacing between content and services */
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .services-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-wrapper {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .service {
+    width: 100%; /* Full-width cards */
+    padding: 1rem;
+  }
+
+  .service i {
+    font-size: 1.8rem;
+  }
+
+  .service h3 {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.8rem;
   }
 }
