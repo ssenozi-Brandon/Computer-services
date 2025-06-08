@@ -580,6 +580,23 @@ main{
   .testimonial-meta {
     font-size: 0.8rem;
   }
+
+  .faq {
+    padding: 2rem 1rem;
+  }
+  
+  .faq-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .faq-question {
+    font-size: 1.1rem;
+  }
+  
+  .faq-answer {
+    font-size: 0.95rem;
+  }
 }
 
 /* Small phones (480px and below) */
