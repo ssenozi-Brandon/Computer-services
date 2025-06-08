@@ -158,7 +158,7 @@ main{
 
 .robot-3d{
   position: absolute;
-  top: -33%;
+  top: -40%;
   right: -20%;
   
 }
@@ -468,40 +468,33 @@ main{
 
 /* Stats Section - Modern Minimalist */
 .stats {
-  padding: 5rem 2rem;
+  padding: 2rem 0rem;
   background: rgba(10, 10, 10, 0.7);
   backdrop-filter: blur(12px);
-  margin: 4rem 0;
-  border-top: 1px solid rgba(140, 9, 49, 0.2);
-  border-bottom: 1px solid rgba(140, 9, 49, 0.2);
+  margin: 1rem 0
 }
 
 .stats-container {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .stat-card {
   flex: 1;
-  background: rgba(26, 26, 26, 0.6);
+  background: transparent;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  min-width: 220px;
+  min-width: 110px;
   border: 1px solid rgba(140, 9, 49, 0.1);
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
-  background: rgba(38, 38, 38, 0.7);
-  box-shadow: 0 10px 25px rgba(140, 9, 49, 0.1);
-}
 
 .stat-content {
   display: flex;
@@ -570,8 +563,8 @@ main{
     max-width: 25rem;
   }
   .robot-3d{
-    scale:.8;
-    top: -25%;
+    scale:.9;
+    top: -37%;
     right: -25%;
   }
 
@@ -622,7 +615,7 @@ main{
   }
   .robot-3d{
     scale:.8;
-    top: -35%;
+    top: -41%;
     right: -25%;
   }
   .service-wrapper {
@@ -663,6 +656,26 @@ main{
   .testimonial-list {
     width: 100%;
   }
+
+  .stats-container {
+    gap: 1rem;
+  }
+  .stat-card {
+    padding: 1rem;
+    min-width: 100px;
+  }
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  .stat-percent,
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+
 }
 
 @media(max-width: 768px){
@@ -679,8 +692,8 @@ main{
     margin-top: 25rem;
   }
   .robot-3d{
-    scale:.75;
-    top: -40%;
+    scale:.9;
+    top: -43%;
     right: 0;
   }
   .content{
@@ -781,6 +794,35 @@ main{
   .faq-answer {
     font-size: 0.95rem;
   }
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .stat-card {
+    width: 80%;
+    min-width: auto;
+  }
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .step {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .step h3 {
+    font-size: 1.1rem;
+  }
+  .step p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Small phones (480px and below) */
@@ -837,5 +879,26 @@ main{
 
   .testimonial-meta {
     font-size: 0.7rem;
+  }
+  .stat-card {
+    width: 100%;
+    padding: 1.2rem;
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  .process {
+    padding: 2rem 1rem;
+  }
+  .section-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .step {
+    width: 100%;
+    padding: 1.2rem;
   }
 }

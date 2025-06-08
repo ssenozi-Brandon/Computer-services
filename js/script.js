@@ -8,11 +8,9 @@ document.querySelectorAll('.faq-question-wrapper').forEach(item => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const statItems = document.querySelectorAll('.stat-item');
-  
+  // Counter animation
   const animateCounters = () => {
-    statItems.forEach(item => {
-      const numberElement = item.querySelector('.stat-number');
+    document.querySelectorAll('.stat-number').forEach(numberElement => {
       const target = parseInt(numberElement.getAttribute('data-count'));
       const duration = 2000;
       const start = 0;
@@ -43,5 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
   if (statsSection) {
     observer.observe(statsSection);
   }
-
 });
