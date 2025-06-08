@@ -374,6 +374,190 @@ main{
   to { opacity: 1; transform: translateY(0); }
 }
 
+.process {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #e7e7e7;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #8C0931;
+  margin: 1rem auto 0;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, 
+    transparent, 
+    rgba(140, 9, 49, 0.3), 
+    transparent);
+  z-index: 0;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: rgba(26, 26, 26, 0.7);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  width: 30%;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(140, 9, 49, 0.1);
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  background: rgba(38, 38, 38, 0.8);
+  border-color: rgba(140, 9, 49, 0.3);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #8C0931, #5300a0);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(140, 9, 49, 0.3);
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  color: #e7e7e7;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #b3b3b3;
+  line-height: 1.6;
+}
+
+/* Stats Section - Modern Minimalist */
+.stats {
+  padding: 5rem 2rem;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  margin: 4rem 0;
+  border-top: 1px solid rgba(140, 9, 49, 0.2);
+  border-bottom: 1px solid rgba(140, 9, 49, 0.2);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  flex: 1;
+  background: rgba(26, 26, 26, 0.6);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-width: 220px;
+  border: 1px solid rgba(140, 9, 49, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(38, 38, 38, 0.7);
+  box-shadow: 0 10px 25px rgba(140, 9, 49, 0.1);
+}
+
+.stat-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #FFCB74;
+  line-height: 1;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-percent {
+  font-size: 2rem;
+  color: #8C0931;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.stat-label {
+  display: block;
+  font-size: 1rem;
+  color: #b3b3b3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.stat-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8C0931, #FFCB74);
+  width: 0;
+  transition: width 1.5s ease-out;
+}
+
+.stat-card:hover .stat-bar {
+  width: 100%;
+}
+
 
 @media(max-width: 1300px){
   header{
